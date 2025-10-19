@@ -386,6 +386,16 @@ function timeAgo($timestamp)
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        function changeImage(thumbElement, imageSrc) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = 'uploads/' + imageSrc;
+
+            document.querySelectorAll('.thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            thumbElement.classList.add('active');
+        }
+
         class CommentSystem {
             constructor() {
                 this.reportId = <?php echo $report_id; ?>;
