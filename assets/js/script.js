@@ -1,5 +1,3 @@
-// Modern JavaScript for Stemba Report
-
 document.addEventListener('DOMContentLoaded', function() {
     const animateOnScroll = () => {
         const elements = document.querySelectorAll('.modern-card, .feature-card');
